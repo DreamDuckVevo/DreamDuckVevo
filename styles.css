@@ -16,6 +16,7 @@
 }
 .home-img-1 {
   background-image: url("recursos/novaskin-wallpaper-reading.jpg");
+  background-position: right;
 }
 .home-img-2 {
   background-image: url("recursos/novaskin-wallpaper-broadcasting.jpg");
