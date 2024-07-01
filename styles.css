@@ -168,6 +168,7 @@ button.learn-more .button-text {
 
 button:hover .circle {
   width: 100%;
+  background-color: rgb(150, 94, 255);
 }
 
 button:hover .circle .icon.arrow {
@@ -207,40 +208,6 @@ button:hover .button-text {
   border-right: 2px solid rgb(182, 143, 255);
 }
 
-.tooltip {
-  position: absolute;
-  right: -105px;
-  opacity: 0;
-  background-color: rgb(12, 12, 12);
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition-duration: 0.2s;
-  pointer-events: none;
-  letter-spacing: 0.5px;
-}
-
-.tooltip::before {
-  position: absolute;
-  content: "";
-  width: 10px;
-  height: 10px;
-  background-color: rgb(12, 12, 12);
-  background-size: 1000%;
-  background-position: center;
-  transform: rotate(45deg);
-  left: -5%;
-  transition-duration: 0.3s;
-}
-
-.Btn:hover .tooltip {
-  opacity: 1;
-  transition-duration: 0.3s;
-}
-
 .Btn:hover {
   background-color: rgb(150, 94, 255);
   transition-duration: 0.3s;
@@ -267,4 +234,54 @@ button:hover .button-text {
     transform: translateY(0px);
     opacity: 1;
   }
+}
+
+.btn {
+  position: relative;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  display: inline-block;
+  border-radius: 6em;
+  transition: all 0.2s;
+
+  font-family: inherit;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  background: #282936;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: rgb(150, 94, 255);
+  color: rgb(255, 255, 255);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
 }
